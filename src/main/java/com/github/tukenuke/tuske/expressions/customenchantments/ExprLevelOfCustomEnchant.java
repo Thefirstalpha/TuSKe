@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions.customenchantments;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -38,12 +38,12 @@ public class ExprLevelOfCustomEnchant extends SimpleExpression<Number> {
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "level of custom enchantment " + this.ce + " of " + this.i;
 	}
 
 	@Override
-	@Nullable
+
 	protected Number[] get(Event e) {
 		ItemStack i = this.i.getSingle(e);
 		CEnchant ce = this.ce.getSingle(e);

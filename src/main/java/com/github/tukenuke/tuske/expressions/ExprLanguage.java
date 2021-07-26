@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -23,7 +23,7 @@ public class ExprLanguage extends SimplePropertyExpression<Player, String>{
 	}
 
 	@Override
-	@Nullable
+	
 	public String convert(Player p) {
 		return (p != null)? (isSpigot) ? p.spigot().getLocale() : getLanguage(p) : null;
 	}

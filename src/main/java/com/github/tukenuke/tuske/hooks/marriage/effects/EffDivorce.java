@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import com.lenis0012.bukkit.marriage2.Marriage;
 import com.lenis0012.bukkit.marriage2.MarriageAPI;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -29,7 +29,7 @@ public class EffDivorce extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "divorce " + this.p;
 	}
 

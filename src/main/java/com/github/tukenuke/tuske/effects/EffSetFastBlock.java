@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -32,7 +32,7 @@ public class EffSetFastBlock extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "";
 	}
 

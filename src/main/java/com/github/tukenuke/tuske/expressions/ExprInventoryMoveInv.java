@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.expressions;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.Inventory;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -40,12 +40,12 @@ public class ExprInventoryMoveInv extends SimpleExpression<Inventory>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "event-inventory-move";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Inventory[] get(Event e) {
 		return new Inventory[]{ (isFrom) ? ((InventoryMoveEvent)e).getInventoryFrom() : ((InventoryMoveEvent)e).getInventoryTo()};
 	}

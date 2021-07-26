@@ -5,7 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -39,12 +39,12 @@ public class ExprDropsOfBlock extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "drops of " + this.b.toString(arg0, arg1);
 	}
 
 	@Override
-	@Nullable
+	
 	protected ItemStack[] get(Event e) {
 		Block b = this.b.getSingle(e);
 		if (b != null){

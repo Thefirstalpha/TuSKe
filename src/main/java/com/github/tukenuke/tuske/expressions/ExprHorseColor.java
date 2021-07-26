@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Entity;
@@ -23,7 +23,7 @@ public class ExprHorseColor extends SimplePropertyExpression<Entity, String>{
 	}
 
 	@Override
-	@Nullable
+
 	public String convert(Entity e) {
 		if (e instanceof Horse && ((Horse)e).getVariant().equals(Horse.Variant.HORSE)){
 			return ((Horse)e).getColor().name().toLowerCase().replaceAll("_", " ");

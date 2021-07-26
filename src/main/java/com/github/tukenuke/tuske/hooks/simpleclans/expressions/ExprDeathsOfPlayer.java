@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -25,7 +25,7 @@ public class ExprDeathsOfPlayer extends SimplePropertyExpression<Player, Number>
 	}
 
 	@Override
-	@Nullable
+	
 	public Number convert(Player p) {
 		if (p != null){
 			ClanPlayer cp = SimpleClans.getInstance().getClanManager().getClanPlayer(p);

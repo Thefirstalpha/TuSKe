@@ -73,7 +73,7 @@ public class Evaluate {
 			try {
 				Commands.currentArguments = args; //In case it is evaluated in a command, it will make the arguments work
 				if (parseString) {
-					ScriptLoader.currentScript = currentScript;
+					ScriptLoader.setCurrentScript(currentScript);
 					VariableString vs = VariableString.newInstance(code.replaceAll("\"", "\"\""));
 					if (vs != null)
 						code = vs.getSingle(e);
@@ -99,7 +99,7 @@ public class Evaluate {
 					}
 					toRemove.forEach(Node::remove);
 				}
-				ScriptLoader.currentScript = c;
+				ScriptLoader.setCurrentScript(c);
 				ScriptLoader.setCurrentEvent("evaluate effect", e.getClass());
 				TriggerSection ts = new TriggerSection(c.getMainNode()) {
 					@Override
@@ -113,7 +113,7 @@ public class Evaluate {
 					}
 				};
 				ScriptLoader.deleteCurrentEvent();
-				ScriptLoader.currentScript = null;
+				ScriptLoader.setCurrentScript(null);
 				Commands.currentArguments = null;
 				setVariable(log, e, results);
 				TriggerItem.walk(ts, e);

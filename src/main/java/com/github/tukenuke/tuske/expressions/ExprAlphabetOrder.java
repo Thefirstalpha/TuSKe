@@ -7,7 +7,7 @@ import ch.njol.skript.doc.Since;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -43,12 +43,12 @@ public class ExprAlphabetOrder extends SimpleExpression<Object>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return null;
 	}
 
 	@Override
-	@Nullable
+
 	protected Object[] get(Event e) {
 		
 		if (this.o.getArray(e) != null){

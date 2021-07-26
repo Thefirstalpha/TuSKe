@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 import com.lenis0012.bukkit.marriage2.MarriageAPI;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -23,7 +23,7 @@ public class ExprPartnerOf extends SimplePropertyExpression <Player, OfflinePlay
 	}
 
 	@Override
-	@Nullable
+	
 	public OfflinePlayer convert(Player p) {
 		MPlayer mp = MarriageAPI.getInstance().getMPlayer(p.getUniqueId());
 		if (mp != null && mp.isMarried())

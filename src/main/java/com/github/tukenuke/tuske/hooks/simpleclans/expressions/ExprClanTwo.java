@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -52,12 +52,12 @@ public class ExprClanTwo extends SimpleExpression<Clan>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "event-clan-two";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Clan[] get(Event e) {
 		switch (this.e){
 		case 1: return new Clan[] {((AllyClanAddEvent)e).getClanSecond()};

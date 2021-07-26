@@ -5,7 +5,7 @@ import org.bukkit.event.Event;
 
 import java.util.ArrayList;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -41,12 +41,12 @@ public class ExprListPaged extends SimpleExpression<Object>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "page " + this.p + " of " + this.o + " with " + this.l + " lines";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Object[] get(Event e) {
 		if (this.l.getSingle(e) != null && this.p.getSingle(e) != null && this.o.getAll(e) != null){
 			int l = this.l.getSingle(e).intValue();

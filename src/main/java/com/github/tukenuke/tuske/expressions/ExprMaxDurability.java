@@ -6,7 +6,7 @@ import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -28,7 +28,7 @@ public class ExprMaxDurability extends SimplePropertyExpression<ItemStack, Integ
 	}
 
 	@Override
-	@Nullable
+	
 	public Integer convert(ItemStack i) {
 		return (i != null) ? (int) i.getType().getMaxDurability() : null;
 	}

@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.util;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.ClassInfo;
@@ -66,7 +66,7 @@ public abstract class SimpleType<T> extends ClassInfo<T> implements Changer<T>{
 						}
 
 						@Override
-						@Nullable
+						
 						public T parse(String arg0, ParseContext arg1) {
 							return SimpleType.this.parse(arg0, arg1);
 						}

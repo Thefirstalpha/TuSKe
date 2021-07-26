@@ -6,7 +6,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageModifier;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -60,12 +60,12 @@ public class ExprDamageModifier extends SimpleExpression<Double>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "damage modifier";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Double[] get(Event e) {
 		if (dm.getSingle(e) != null){
 			return new Double[]{((EntityDamageEvent)e).isApplicable(dm.getSingle(e)) ? ((EntityDamageEvent)e).getDamage(dm.getSingle(e)) : null};

@@ -8,11 +8,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import ch.njol.skript.util.FileUtils;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.apache.commons.io.FileUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -52,7 +52,7 @@ public class GitHubUpdater {
 	 * The constructor of the GitHubUpdater
 	 *
 	 * @param instance - The instance of your plugin.
-	 * @param pluginFile - The jar file of your plugin. You can get it with {@link org.bukkit.plugin.java.JavaPlugin#getFile()}
+	 * @param pluginFile - The jar file of your plugin.
 	 * @param gitHubUrl - The download link. It should be like '&ltGitHub user&gt/&ltrepo&gt
 	 * @param acceptBetaReleases - True to allow to check/download pre releases.
 	 */
@@ -136,7 +136,7 @@ public class GitHubUpdater {
 			File jarOld = new File("plugins" + File.separator, PLUGIN_JAR.getName());
 			try {
 				jarOld.delete();
-				FileUtils.copyFileToDirectory(jarNew, new File("plugins" + File.separator));
+				FileUtils.copy(jarNew, new File("plugins" + File.separator));
 				jarNew.delete();
 
 			} catch (IOException e) {
@@ -208,7 +208,7 @@ public class GitHubUpdater {
 				File f = new File(PLUGIN.getDataFolder(), PLUGIN.getName() + ".jar");
 				if (f.exists())
 					f.delete();
-				FileUtils.copyInputStreamToFile(download.getInputStream(), f);
+				FileUtils.save(download.getInputStream(), f);
 			} catch (Exception e) {
 			} finally {
 				if (download != null)

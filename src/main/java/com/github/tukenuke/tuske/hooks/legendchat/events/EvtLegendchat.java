@@ -4,7 +4,7 @@ import br.com.devpaulo.legendchat.api.events.ChatMessageEvent;
 import br.com.devpaulo.legendchat.api.events.PrivateMessageEvent;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -17,7 +17,7 @@ public class EvtLegendchat extends SkriptEvent{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean b) {
+	public String toString( Event e, boolean b) {
 		return "l[egend]c[hat] chat";
 	}
 

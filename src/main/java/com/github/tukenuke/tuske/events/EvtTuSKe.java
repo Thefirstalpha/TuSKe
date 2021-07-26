@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.ReflectionUtils;
 import com.github.tukenuke.tuske.manager.gui.GUIActionEvent;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -28,7 +28,7 @@ public class EvtTuSKe extends SkriptEvent{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "tuske event " + (arg0 != null ? arg0.getEventName() : "") ;
 	}
 

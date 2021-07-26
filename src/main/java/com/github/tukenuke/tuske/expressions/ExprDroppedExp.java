@@ -6,7 +6,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.inventory.FurnaceExtractEvent;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.classes.Changer;
@@ -42,12 +42,12 @@ public class ExprDroppedExp extends SimpleExpression<Experience>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "dropped experience";
 	}
 
 	@Override
-	@Nullable
+
 	protected Experience[] get(Event e) {
 		if (e instanceof BlockBreakEvent)
 			return new Experience[]{new Experience(((BlockBreakEvent)e).getExpToDrop())};

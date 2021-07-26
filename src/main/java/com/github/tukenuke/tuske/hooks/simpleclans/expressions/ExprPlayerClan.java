@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Player;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import net.sacredlabyrinth.phaed.simpleclans.Clan;
@@ -20,7 +20,7 @@ public class ExprPlayerClan  extends SimplePropertyExpression<Player, Clan>{
 	}
 
 	@Override
-	@Nullable
+	
 	public Clan convert(Player p) {
 		ClanPlayer clan = SimpleClans.getInstance().getClanManager().getClanPlayer(p);
 	    if (clan != null) 

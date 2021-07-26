@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.events;
 import com.github.tukenuke.tuske.util.Registry;
 import net.sacredlabyrinth.phaed.simpleclans.events.*;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -23,7 +23,7 @@ public class EvtSimpleClans extends SkriptEvent{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "clan event";
 	}
 

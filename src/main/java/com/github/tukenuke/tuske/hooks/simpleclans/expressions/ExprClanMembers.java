@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -43,11 +43,11 @@ public class ExprClanMembers extends SimpleExpression<OfflinePlayer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "clan members";
 	}
 	@Override
-	@Nullable
+
 	protected OfflinePlayer[] get(Event e) {
 		Clan c = this.c.getSingle(e);
 		if (c != null){

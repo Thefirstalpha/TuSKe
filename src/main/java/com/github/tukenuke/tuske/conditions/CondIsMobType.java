@@ -5,7 +5,7 @@ import org.bukkit.entity.Creature;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Tameable;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Condition;
 import ch.njol.skript.lang.Expression;
@@ -16,8 +16,8 @@ import ch.njol.util.Kleenean;
 public class CondIsMobType extends Condition{
 	static {
 		Registry.newCondition(CondIsMobType.class,
-				"%livingentities% (is|are) [a] (0¦hostile|1¦neutral|2¦passive) [mob]",
-				"%livingentities% (is|are)(n't| not) [a] (0¦hostile|1¦neutral|2¦passive) [mob]");
+				"%livingentities% (is|are) [a] (0ï¿½hostile|1ï¿½neutral|2ï¿½passive) [mob]",
+				"%livingentities% (is|are)(n't| not) [a] (0ï¿½hostile|1ï¿½neutral|2ï¿½passive) [mob]");
 	}
 
 	private Expression<LivingEntity> et;
@@ -39,7 +39,7 @@ public class CondIsMobType extends Condition{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return et + " is " + mt.name().toLowerCase();
 	}
 

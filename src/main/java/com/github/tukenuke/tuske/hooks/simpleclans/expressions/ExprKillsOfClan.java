@@ -1,7 +1,7 @@
 package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -32,12 +32,12 @@ public class ExprKillsOfClan extends SimpleExpression<Number>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return null;
 	}
 
 	@Override
-	@Nullable
+	
 	protected Number[] get(Event e) {
 		Clan c = this.c.getSingle(e);
 		if (c != null)

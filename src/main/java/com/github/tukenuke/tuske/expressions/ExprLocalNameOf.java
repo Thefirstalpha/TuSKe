@@ -8,7 +8,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.ItemType;
@@ -48,12 +48,12 @@ public class ExprLocalNameOf extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "local name of " + this.o;
 	}
 
 	@Override
-	@Nullable
+
 	protected String[] get(Event e) {
 		if (this.o.getSingle(e) == null)
 			return null;

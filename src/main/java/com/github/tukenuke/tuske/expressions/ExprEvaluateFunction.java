@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.EvalFunction;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -41,12 +41,12 @@ public class ExprEvaluateFunction extends SimpleExpression<Object>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "evaluate function";
 	}
 
 	@Override
-	@Nullable
+
 	protected Object[] get(Event e){
 		String funcName = func.getSingle(e);
 		if (funcName != null){

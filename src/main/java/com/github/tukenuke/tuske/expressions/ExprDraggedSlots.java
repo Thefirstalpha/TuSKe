@@ -7,7 +7,7 @@ import org.bukkit.event.inventory.InventoryDragEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -43,12 +43,12 @@ public class ExprDraggedSlots extends SimpleExpression<Integer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "inventory dragged " + (isTop ? "top" : "bottom") + " slots";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Integer[] get(Event e) {
 		
 		List<Integer> slots = new ArrayList<>();

@@ -34,7 +34,7 @@ public class ParserUtils {
 			return ReflectionUtils.getField(newParserInstance.getClass(), newParserInstance, "currentSections");
 			
 		}
-		return ScriptLoader.currentSections;
+		return ScriptLoader.getCurrentSections();
 	}
 	/**
 	 * 

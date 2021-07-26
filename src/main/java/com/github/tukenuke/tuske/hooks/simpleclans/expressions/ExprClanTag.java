@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -23,7 +23,7 @@ public class ExprClanTag extends SimplePropertyExpression<Clan, String>{
 		return String.class;
 	}
 	@Override
-	@Nullable
+	
 	public String convert(Clan c) {
 	    if (c != null) {
 	    	return c.getColorTag().replaceAll("&", "�");

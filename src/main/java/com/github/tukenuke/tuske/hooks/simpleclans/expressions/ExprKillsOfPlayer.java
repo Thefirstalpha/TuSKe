@@ -12,14 +12,14 @@ import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
 
-import javax.annotation.Nullable;
+
 
 import net.sacredlabyrinth.phaed.simpleclans.ClanPlayer;
 import net.sacredlabyrinth.phaed.simpleclans.SimpleClans;
 
 public class ExprKillsOfPlayer extends SimpleExpression<Number>{
 	static {
-		Registry.newProperty(ExprKillsOfPlayer.class, "clan (1¦rival|2¦neutral|3¦civilian) kills", "player");
+		Registry.newProperty(ExprKillsOfPlayer.class, "clan (1ï¿½rival|2ï¿½neutral|3ï¿½civilian) kills", "player");
 	}
 	
 	private Expression<Player> p;
@@ -44,12 +44,12 @@ public class ExprKillsOfPlayer extends SimpleExpression<Number>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "kills of " + this.p;
 	}
 
 	@Override
-	@Nullable
+
 	protected Number[] get(Event e) {
 		Player p = this.p.getSingle(e);
 		if (p != null){

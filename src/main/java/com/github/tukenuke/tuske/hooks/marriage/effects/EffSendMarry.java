@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.hooks.marriage.effects;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Player;
@@ -31,7 +31,7 @@ public class EffSendMarry extends Effect {
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return null;
 	}
 

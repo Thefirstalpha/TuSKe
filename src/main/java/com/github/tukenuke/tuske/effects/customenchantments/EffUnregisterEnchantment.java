@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.effects.customenchantments;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -28,7 +28,7 @@ public class EffUnregisterEnchantment extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "unregister custom enchantment with id " + this.id;
 	}
 

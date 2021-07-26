@@ -5,7 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -44,12 +44,12 @@ public class ExprDraggedItem extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return null;
 	}
 
 	@Override
-	@Nullable
+	
 	protected ItemStack[] get(Event e) {
 		if (isOld)
 			return new ItemStack[]{((InventoryDragEvent)e).getOldCursor()};

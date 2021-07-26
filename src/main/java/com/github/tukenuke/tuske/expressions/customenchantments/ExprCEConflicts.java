@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.expressions.customenchantments;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.manager.customenchantment.CEnchant;
 import com.github.tukenuke.tuske.util.Registry;
@@ -42,12 +42,12 @@ public class ExprCEConflicts extends SimpleExpression<CEnchant>{
 	}
 	
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "conflicts of " + ((ce != null) ? ce : "custom enchantment");
 	}
 	
 	@Override
-	@Nullable
+	
 	protected CEnchant[] get(Event e) {
 		CEnchant ce = this.ce.getSingle(e);
 		CEnchant[] conf = new CEnchant[ce.getEnchant().getConflicts().size()];

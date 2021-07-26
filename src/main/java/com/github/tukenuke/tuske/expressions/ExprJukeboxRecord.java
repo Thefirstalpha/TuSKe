@@ -5,7 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.Jukebox;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -23,7 +23,7 @@ public class ExprJukeboxRecord extends SimplePropertyExpression<Block, ItemStack
 	}
 
 	@Override
-	@Nullable
+
 	public ItemStack convert(Block b) {
 		return b != null ? new ItemStack(((Jukebox)b.getState()).getPlaying()) : null;
 	}

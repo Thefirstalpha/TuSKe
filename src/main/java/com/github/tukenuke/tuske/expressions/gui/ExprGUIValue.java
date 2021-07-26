@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions.gui;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -100,12 +100,12 @@ public class ExprGUIValue extends SimpleExpression<Object>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return toString;
 	}
 
 	@Override
-	@Nullable
+
 	protected Object[] get(Event e) {
 		GUIInventory gui = !isOldGui ? GUIHandler.getInstance().getGUIEvent(e) : null;
 		if (e instanceof InventoryClickEvent){

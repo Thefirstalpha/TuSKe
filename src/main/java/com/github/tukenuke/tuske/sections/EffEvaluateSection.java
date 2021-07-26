@@ -71,7 +71,7 @@ public class EffEvaluateSection extends EffectSection {
 		}
 		args = Commands.currentArguments;
 		withSafety = parseResult.expr.contains("with safety");
-		currentScript = ScriptLoader.currentScript;
+		currentScript = ScriptLoader.getCurrentScript();
 		return true;
 	}
 

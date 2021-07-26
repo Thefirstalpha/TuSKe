@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.expressions;
 import ch.njol.skript.doc.NoDoc;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -35,12 +35,12 @@ public class ExprServerOnlineTime extends SimpleExpression<Timespan>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "the online time of the server";
 	}
 
 	@Override
-	@Nullable
+
 	protected Timespan[] get(Event e) {
 		return new Timespan[]{ new Timespan(System.currentTimeMillis() - time)};
 	}

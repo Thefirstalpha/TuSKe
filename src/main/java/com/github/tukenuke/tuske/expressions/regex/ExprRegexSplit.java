@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.expressions.regex;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -39,12 +39,12 @@ public class ExprRegexSplit extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "regex split " + str + " with " + regex;
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		String string = str.getSingle(e);
 		final Pattern p = Regex.getInstance().getPattern(regex.getSingle(e));

@@ -11,7 +11,7 @@ import com.jcdesimp.landlord.persistantData.OwnedLand;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -43,17 +43,17 @@ public class ExprLandClaimsOf extends SimpleExpression<LowOwnedLand>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "land claims of " + this.p;
 	}
 
 	@Override
-	@Nullable
+
 	protected LowOwnedLand[] get(Event e) {
 		Player p = this.p.getSingle(e);
 		List<LowOwnedLand> lands = new ArrayList<LowOwnedLand>();
-		for (OwnedLand ol : Landlord.getInstance().getDatabase().find(OwnedLand.class).where().eq("ownerName", p.getUniqueId().toString()).findList())
-			lands.add(ol.getLowLand());
+		//for (OwnedLand ol : Landlord.getInstance().getDatabase().find(OwnedLand.class).where().eq("ownerName", p.getUniqueId().toString()).findList())
+		//	lands.add(ol.getLowLand());
 		return lands.toArray(new LowOwnedLand[lands.size()]);
 	}
 

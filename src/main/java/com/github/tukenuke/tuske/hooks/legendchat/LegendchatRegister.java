@@ -16,7 +16,7 @@ import com.github.tukenuke.tuske.util.SimpleType;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import javax.annotation.Nullable;
+
 
 /**
  * @author Tuke_Nuke on 10/04/2017
@@ -40,7 +40,7 @@ public class LegendchatRegister {
 
 		new SimpleType<Channel>(Channel.class, "channel"){
 			@Override
-			@Nullable
+			
 			public Channel parse(String s, ParseContext context) {
 				ChannelManager cm = Legendchat.getChannelManager();
 				if (cm.existsChannel(s.toLowerCase()))

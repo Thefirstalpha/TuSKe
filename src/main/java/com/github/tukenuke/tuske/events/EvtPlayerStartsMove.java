@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.events;
 
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -12,7 +12,7 @@ import com.github.tukenuke.tuske.listeners.PlayerMovesCheck;
 public class EvtPlayerStartsMove extends SkriptEvent{
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "player starts moving";
 	}
 

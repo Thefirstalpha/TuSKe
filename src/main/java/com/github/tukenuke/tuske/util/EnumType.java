@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.util;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.ClassInfo;
@@ -46,7 +46,7 @@ public class EnumType extends ClassInfo{
 		if (!TuSKe.getInstance().getConfig().getBoolean("use_only_enum_names")){//It will parse the enum types as '<Enum name>' and '<Enum type>.<Enum name>'
 			return new Parser<T>() {
 				@Override
-				@Nullable
+				
 				public T parse(String name, ParseContext arg1) {
 					name = name.replaceAll("_", " ");
 					if (name.startsWith(c.getSimpleName().toUpperCase() + "."))
@@ -82,7 +82,7 @@ public class EnumType extends ClassInfo{
 		} else {
 			return new Parser<T>() {
 				@Override
-				@Nullable
+				
 				public T parse(String name, ParseContext arg1) {
 					name = name.replaceAll("_", " ");
 					if (name.startsWith(c.getSimpleName().toUpperCase() + ".")) {

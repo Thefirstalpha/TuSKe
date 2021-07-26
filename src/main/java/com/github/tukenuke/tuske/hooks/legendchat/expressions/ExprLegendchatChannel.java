@@ -1,7 +1,7 @@
 package com.github.tukenuke.tuske.hooks.legendchat.expressions;
 
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.api.events.ChatMessageEvent;
@@ -38,12 +38,12 @@ public class ExprLegendchatChannel extends SimpleExpression<Channel> {
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "l[egend]c[hat] channel";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Channel[] get(Event e) {
 		ChatMessageEvent chat = (ChatMessageEvent)e;
 		ChannelManager cm = Legendchat.getChannelManager();

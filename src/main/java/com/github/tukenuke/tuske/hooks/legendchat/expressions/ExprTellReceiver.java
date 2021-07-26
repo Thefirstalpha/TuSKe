@@ -6,7 +6,7 @@ import org.bukkit.event.Event;
 
 import br.com.devpaulo.legendchat.api.events.PrivateMessageEvent;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -43,12 +43,12 @@ public class ExprTellReceiver extends SimpleExpression<CommandSender>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "receiver";
 	}
 
 	@Override
-	@Nullable
+	
 	protected CommandSender[] get(Event e) {
 		PrivateMessageEvent tell = (PrivateMessageEvent)e;
 		return new CommandSender[] { (CommandSender) tell.getReceiver() };

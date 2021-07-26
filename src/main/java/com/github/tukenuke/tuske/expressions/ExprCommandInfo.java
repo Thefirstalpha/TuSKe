@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.command.Commands;
 import ch.njol.skript.command.ScriptCommand;
@@ -63,12 +63,12 @@ public class ExprCommandInfo extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return expr;
 	}
 	
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		String cmd = this.cmd.getSingle(e);
 		if (cmd != null){

@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -60,13 +60,13 @@ public class ExprRGBColor extends SimpleExpression<Integer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "the RGB color of the " + i.toString(arg0, arg1);
 	}
 
 	@Override
-	@Nullable
-	protected Integer[] get(@Nullable Event e) {
+	
+	protected Integer[] get( Event e) {
 		Object[] array = i.getArray(e);
 		//just some safe check
 		if (array != null && array.length > 0 && array[0] != null){
@@ -75,9 +75,9 @@ public class ExprRGBColor extends SimpleExpression<Integer>{
 			int blue = 0;
 			//It works only for the first one in expression
 			if (array[0] instanceof Color){
-				red = ((Color)array[0]).getBukkitColor().getRed();
-				green = ((Color)array[0]).getBukkitColor().getGreen();
-				blue = ((Color)array[0]).getBukkitColor().getBlue();
+				red = ((Color)array[0]).asBukkitColor().getRed();
+				green = ((Color)array[0]).asBukkitColor().getGreen();
+				blue = ((Color)array[0]).asBukkitColor().getBlue();
 			} else if (array[0] instanceof ItemStack || array[0] instanceof ItemType){
 				ItemMeta im = array[0] instanceof ItemType ? ((ItemType)array[0]).getRandom().getItemMeta() :
 						((ItemStack)array[0]).getItemMeta();

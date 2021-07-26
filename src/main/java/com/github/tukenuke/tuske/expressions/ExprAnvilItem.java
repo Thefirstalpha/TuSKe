@@ -5,7 +5,7 @@ import com.github.tukenuke.tuske.events.customevent.AnvilRenameEvent;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -62,12 +62,12 @@ public class ExprAnvilItem extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "event-item-one";
 	}
 
 	@Override
-	@Nullable
+
 	protected ItemStack[] get(Event e) {
 		if (e instanceof AnvilCombineEvent)
 			return new ItemStack[] { ((AnvilCombineEvent)e).getInventory().getItem(this.i)};

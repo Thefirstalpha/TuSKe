@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.manager.recipe;
 import java.util.*;
 
 import ch.njol.skript.Skript;
-import org.apache.commons.lang3.tuple.Pair;
+import ch.njol.util.Pair;
 import org.bukkit.Bukkit;
 import org.bukkit.Keyed;
 import org.bukkit.Material;
@@ -83,7 +83,7 @@ public class RecipeManager implements Listener{
 				//Else it will try to find another matching one.
 			}
 		}
-		return Pair.of(matchingLevel, r);
+		return new Pair<>(matchingLevel, r);
 	}
 	public Recipe getCustomRecipe(Recipe rec){
 		/**for (Recipe recipe : recipes)

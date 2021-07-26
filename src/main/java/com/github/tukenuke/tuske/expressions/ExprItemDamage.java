@@ -5,7 +5,7 @@ import com.github.tukenuke.tuske.util.ReflectionUtils;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
@@ -46,12 +46,12 @@ public class ExprItemDamage extends SimpleExpression<Integer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "item damage";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Integer[] get(Event e) {
 		return new Integer [] {((PlayerItemDamageEvent) e).getDamage()};
 	}

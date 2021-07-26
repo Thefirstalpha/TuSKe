@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.block.Block;
 import org.bukkit.block.Jukebox;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -26,7 +26,7 @@ public class EffEjectRecord extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "eject record of " + block.toString(arg0, arg1);
 	}
 

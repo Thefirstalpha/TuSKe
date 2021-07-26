@@ -9,7 +9,7 @@ import net.sacredlabyrinth.phaed.simpleclans.Clan;
 import net.sacredlabyrinth.phaed.simpleclans.events.*;
 import org.bukkit.entity.Player;
 
-import javax.annotation.Nullable;
+
 
 /**
  * @author Tuke_Nuke on 10/04/2017
@@ -27,7 +27,7 @@ public class SimpleClansRegister {
 	private void types() {
 		new SimpleType<Clan>(Clan.class, "clan"){
 			@Override
-			@Nullable
+			
 			public Clan parse(String s, ParseContext context) {
 				return null;
 			}

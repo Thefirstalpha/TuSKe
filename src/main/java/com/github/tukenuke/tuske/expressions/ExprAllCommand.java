@@ -8,7 +8,7 @@ import com.github.tukenuke.tuske.util.ReflectionUtils;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.command.Commands;
 import ch.njol.skript.command.ScriptCommand;
@@ -51,12 +51,12 @@ public class ExprAllCommand extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return scriptsOnly ? "all scripts command": "all commands";
 	}
 
 	@Override
-	@Nullable
+
 	protected String[] get(Event e) {
 		if (scriptsOnly){
 			Map<String, ScriptCommand> cmds = ReflectionUtils.getField(Commands.class, null, "commands");

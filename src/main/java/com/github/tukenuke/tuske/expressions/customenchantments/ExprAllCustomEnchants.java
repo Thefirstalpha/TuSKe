@@ -6,7 +6,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Map;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -43,12 +43,12 @@ public class ExprAllCustomEnchants extends SimpleExpression<CEnchant> {
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "all custom enchantments of " + this.i;
 	}
 
 	@Override
-	@Nullable
+	
 	protected CEnchant[] get(Event e) {
 		ItemStack i = this.i.getSingle(e);
 		if (i != null){

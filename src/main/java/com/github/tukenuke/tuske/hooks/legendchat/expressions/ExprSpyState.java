@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.players.PlayerManager;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -25,7 +25,7 @@ public class ExprSpyState extends SimplePropertyExpression<Player, Boolean>{
 	}
 
 	@Override
-	@Nullable
+
 	public Boolean convert(Player p) {
 		return Legendchat.getPlayerManager().isSpy(p);
 	}

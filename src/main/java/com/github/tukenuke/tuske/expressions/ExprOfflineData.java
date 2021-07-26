@@ -9,7 +9,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -32,7 +32,7 @@ public class ExprOfflineData extends SimplePropertyExpression<OfflinePlayer, Pla
 	}
 
 	@Override
-	@Nullable
+	
 	public Player convert(OfflinePlayer p) {
 		if (!p.isOnline()){
 			Player player = TuSKe.getNMS().getToPlayer(p);

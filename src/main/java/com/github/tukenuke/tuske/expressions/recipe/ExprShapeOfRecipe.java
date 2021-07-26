@@ -5,7 +5,7 @@ import org.bukkit.event.Event;
 import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -37,12 +37,12 @@ public class ExprShapeOfRecipe extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "shape of " + rec.toString(arg0, arg1);
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		Recipe recipe = rec.getSingle(e);
 		if (recipe != null && recipe instanceof ShapedRecipe)

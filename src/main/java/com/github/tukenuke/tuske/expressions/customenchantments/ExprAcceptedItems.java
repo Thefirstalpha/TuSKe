@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.expressions.customenchantments;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.manager.customenchantment.AcceptedItems;
 import com.github.tukenuke.tuske.util.Registry;
@@ -43,12 +43,12 @@ public class ExprAcceptedItems extends SimpleExpression<String>{
 	}
 	
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "accepted items of " + ((ce != null) ? ce : "custom enchantment");
 	}
 	
 	@Override
-	@Nullable
+
 	protected String[] get(Event e) {
 		CEnchant ce = this.ce.getSingle(e);
 		return toStringArray(ce.getEnchant().getAcceptedItems());

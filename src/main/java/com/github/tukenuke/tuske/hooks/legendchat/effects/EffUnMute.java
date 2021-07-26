@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.mutes.MuteManager;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -29,7 +29,7 @@ public class EffUnMute extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "mute " + this.p;
 	}
 

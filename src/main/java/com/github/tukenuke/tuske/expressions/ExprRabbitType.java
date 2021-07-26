@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
@@ -34,7 +34,7 @@ public class ExprRabbitType extends SimplePropertyExpression<Entity, String>{
 	}
 
 	@Override
-	@Nullable
+
 	public String convert(Entity e) {
 		if (e instanceof Rabbit){
 			return ((Rabbit)e).getRabbitType().name().toLowerCase().replaceAll("_", " ");

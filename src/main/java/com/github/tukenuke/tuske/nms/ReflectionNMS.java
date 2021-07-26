@@ -11,9 +11,8 @@ import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.mojang.authlib.GameProfile;
-
 import com.github.tukenuke.tuske.TuSKe;
+import protocolsupport.protocol.utils.authlib.GameProfile;
 
 public class ReflectionNMS implements NMS {
 

@@ -5,7 +5,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.Material;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Condition;
 import ch.njol.skript.lang.Expression;
@@ -43,7 +43,7 @@ public class CondIsBlockType extends Condition{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return this.b + "is block type";
 	}
 

@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 
-import javax.annotation.Nullable;
+
 
 import com.jcdesimp.landlord.persistantData.LowOwnedLand;
 
@@ -21,7 +21,7 @@ public class ExprLandLocation extends SimplePropertyExpression<LowOwnedLand, Loc
 	}
 
 	@Override
-	@Nullable
+	
 	public Location convert(LowOwnedLand ol) {
 		if (ol != null){
 			Chunk c = ol.getChunk();

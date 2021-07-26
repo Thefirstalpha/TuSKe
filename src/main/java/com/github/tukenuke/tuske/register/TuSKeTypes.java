@@ -16,7 +16,7 @@ import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.*;
 
-import javax.annotation.Nullable;
+
 import java.util.regex.Pattern;
 
 /**
@@ -137,7 +137,7 @@ public class TuSKeTypes {
 				.since("1.0.7");
 		new SimpleType<Pattern>(Pattern.class, "regex", "reg(ular )?ex(pressions?|es)?", "Regular expression") {
 			@Override
-			@Nullable
+
 			public Pattern parse(String s, ParseContext arg1) {
 				if (arg1 == ParseContext.COMMAND)
 					return Regex.getInstance().parse(s);
@@ -174,7 +174,7 @@ public class TuSKeTypes {
 				.since("1.7.1, 1.8.3 (regex escaper)");
 		new SimpleType<CEnchant>(CEnchant.class, "customenchantment", "custom ?enchantments?") {
 			@Override
-			@Nullable
+
 			public CEnchant parse(String s, ParseContext arg1) {
 				int l = 0;
 				if (s.matches(".*\\s+\\d+$")){

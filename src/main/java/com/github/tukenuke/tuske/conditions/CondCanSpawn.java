@@ -1,7 +1,5 @@
 package com.github.tukenuke.tuske.conditions;
 
-import javax.annotation.Nullable;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -43,7 +41,7 @@ public class CondCanSpawn extends Condition{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString(Event arg0, boolean arg1) {
 		return "can spawn at " + loc;
 	}
 

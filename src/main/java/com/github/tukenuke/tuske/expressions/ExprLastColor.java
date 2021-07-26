@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.ChatColor;
@@ -18,7 +18,7 @@ public class ExprLastColor extends SimplePropertyExpression<String, String>{
 	}
 
 	@Override
-	@Nullable
+	
 	public String convert(String str) {
 		return ChatColor.getLastColors(str);
 	}

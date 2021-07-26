@@ -6,7 +6,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -48,12 +48,12 @@ public class ExprTagChat extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "tag chat " + this.tag + " of " + this.p;
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		OfflinePlayer p = this.p.getSingle(e);
 		String tag = this.tag.getSingle(e);

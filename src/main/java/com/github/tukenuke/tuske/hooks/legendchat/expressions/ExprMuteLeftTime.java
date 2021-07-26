@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.mutes.MuteManager;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -21,7 +21,7 @@ public class ExprMuteLeftTime extends SimplePropertyExpression<Player, Timespan>
 	}
 
 	@Override
-	@Nullable
+	
 	public Timespan convert(Player p) {
 		MuteManager mm = Legendchat.getMuteManager();
 		if (mm.isPlayerMuted(p.getName()))

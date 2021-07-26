@@ -9,7 +9,7 @@ import com.lenis0012.bukkit.marriage2.Gender;
 import com.lenis0012.bukkit.marriage2.Marriage;
 import com.lenis0012.bukkit.marriage2.MarriageAPI;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -27,7 +27,7 @@ public class ExprGenderOf extends SimplePropertyExpression<Player, Gender> {
 	}
 
 	@Override
-	@Nullable
+	
 	public Gender convert(Player p) {
 		MPlayer mp = MarriageAPI.getInstance().getMPlayer(p.getUniqueId());
 		if (mp != null && mp.getGender() != Gender.UNKNOWN)

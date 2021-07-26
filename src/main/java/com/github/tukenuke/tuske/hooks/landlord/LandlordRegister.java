@@ -7,7 +7,7 @@ import com.jcdesimp.landlord.landManagement.Landflag;
 import com.jcdesimp.landlord.persistantData.LowOwnedLand;
 import com.github.tukenuke.tuske.util.SimpleType;
 
-import javax.annotation.Nullable;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class LandlordRegister {
 	private void types() {
 		new SimpleType<LowOwnedLand>(LowOwnedLand.class, "landclaim", "land ?claim(s)?"){
 			@Override
-			@Nullable
+			
 			public LowOwnedLand parse(String s, ParseContext arg1) {
 				return null;
 			}
@@ -49,7 +49,7 @@ public class LandlordRegister {
 
 		new SimpleType<Landflag>(Landflag.class, "landflag", "land ?flags(s)?"){
 			@Override
-			@Nullable
+			
 			public Landflag parse(String s, ParseContext arg1) {
 				if (fixedFlags.containsKey((s = s.toLowerCase())))
 					return fixedFlags.get(s);

@@ -6,7 +6,7 @@ import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -47,12 +47,12 @@ public class ExprParseRegexError extends SimpleExpression<String>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "lastInstance regex parser error";
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event arg0) {
 		return new String[]{parserError};
 	}

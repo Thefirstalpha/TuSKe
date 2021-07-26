@@ -10,7 +10,7 @@ import org.bukkit.inventory.Recipe;
 
 import com.google.common.collect.Lists;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -41,12 +41,12 @@ public class ExprResultOfRecipe extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "result item of " + this.is;
 	}
 
 	@Override
-	@Nullable
+	
 	protected ItemStack[] get(Event e) {
 		Object[] objs = is.getAll(e);
 		if (objs.length > 0 && objs[0] != null) {

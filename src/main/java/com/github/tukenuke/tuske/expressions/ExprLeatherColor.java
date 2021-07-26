@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -23,7 +23,7 @@ import ch.njol.util.coll.CollectionUtils;
 
 public class ExprLeatherColor extends SimpleExpression<Integer>{
 	static {
-		Registry.newProperty(ExprLeatherColor.class, "[leather] (0¦red|1¦green|2¦blue) colo[u]r", "-itemstacks/colors");
+		Registry.newProperty(ExprLeatherColor.class, "[leather] (0ï¿½red|1ï¿½green|2ï¿½blue) colo[u]r", "-itemstacks/colors");
 	}
 
 	private Expression<?> i;
@@ -47,12 +47,12 @@ public class ExprLeatherColor extends SimpleExpression<Integer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "leather " + ((rgb == 0) ? "red" : ((rgb == 1) ? "green" : "blue")) + " color of " + ((this.i instanceof ItemStack) ? "item stack" : "color");
 	}
 
 	@Override
-	@Nullable
+	
 	protected Integer[] get(Event e) {
 		Color color = null;
 		Object[] array = i.getArray(e);
@@ -65,7 +65,7 @@ public class ExprLeatherColor extends SimpleExpression<Integer>{
 				if (im instanceof LeatherArmorMeta)
 					color = ((LeatherArmorMeta) im).getColor();
 			} else if (array[0] instanceof ch.njol.skript.util.Color)
-				color = ((ch.njol.skript.util.Color)array[0]).getBukkitColor();
+				color = ((ch.njol.skript.util.Color)array[0]).asBukkitColor();
 			if (color != null)
 				switch (rgb){
 					case 0: return new Integer[] {color.getRed()};

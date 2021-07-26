@@ -11,7 +11,7 @@ import org.bukkit.event.Event;
 
 import java.util.UUID;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -49,12 +49,12 @@ public class ExprUUIDOfflinePlayer extends SimpleExpression<OfflinePlayer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return null;
 	}
 
 	@Override
-	@Nullable
+	
 	protected OfflinePlayer[] get(Event e) {
 		String uuid = this.uuid.getSingle(e);
 		return uuid != null && uuid.matches("(?i)[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}")? new OfflinePlayer[]{Bukkit.getOfflinePlayer(UUID.fromString(uuid))} : null;

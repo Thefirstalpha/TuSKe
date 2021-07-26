@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 
 import java.util.ArrayList;
 
-import javax.annotation.Nullable;
+
 
 import com.jcdesimp.landlord.persistantData.Friend;
 import com.jcdesimp.landlord.persistantData.LowOwnedLand;
@@ -44,13 +44,13 @@ public class ExprLandFriends extends SimpleExpression<OfflinePlayer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "land friends of " + this.ol;
 	}
 
 	@SuppressWarnings("deprecation")
 	@Override
-	@Nullable
+	
 	protected OfflinePlayer[] get(Event e) {
 		LowOwnedLand ol = this.ol.getSingle(e);
 		ArrayList<OfflinePlayer> players = new ArrayList<OfflinePlayer>();

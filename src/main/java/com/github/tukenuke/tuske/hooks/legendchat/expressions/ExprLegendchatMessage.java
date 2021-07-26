@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.hooks.legendchat.expressions;
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import br.com.devpaulo.legendchat.api.events.ChatMessageEvent;
 import ch.njol.skript.ScriptLoader;
@@ -42,12 +42,12 @@ public class ExprLegendchatMessage extends SimpleExpression<String> {
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "l[egend]c[hat] message";
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		ChatMessageEvent chat = (ChatMessageEvent)e;
 		return new String[]{chat.getMessage()};

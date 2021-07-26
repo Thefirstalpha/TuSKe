@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.hooks.simpleclans.effects;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Player;
@@ -31,7 +31,7 @@ public class EffPlacePlayerInClan  extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "place " + this.p + " in[ clan] " + this.c;
 	}
 

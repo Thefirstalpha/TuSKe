@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.effects;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -26,7 +26,7 @@ public class EffRemoveFromClan extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "remove " + this.p + " from his clan";
 	}
 

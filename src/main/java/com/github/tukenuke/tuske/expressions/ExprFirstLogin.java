@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.OfflinePlayer;
@@ -19,7 +19,7 @@ public class ExprFirstLogin extends SimplePropertyExpression<OfflinePlayer, Date
 	}
 
 	@Override
-	@Nullable
+
 	public Date convert(OfflinePlayer p) {
 		return new Date(p.getFirstPlayed());
 	}

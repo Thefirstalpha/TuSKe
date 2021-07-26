@@ -10,7 +10,7 @@ import org.bukkit.inventory.Recipe;
 
 import com.google.common.collect.Lists;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -41,12 +41,12 @@ public class ExprRecipeFromItems extends SimpleExpression<Recipe>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "recipe from ingredients " + items.toString(arg0, arg1);
 	}
 
 	@Override
-	@Nullable
+	
 	protected Recipe[] get(Event e) {
 		RecipeManager rm = TuSKe.getRecipeManager();
 		ItemStack[] items = this.items.getAll(e);

@@ -7,7 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -39,12 +39,12 @@ public class ExprItemsOfRecipe extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "ingredients of " + recipe.toString(e, arg1);
 	}
 
 	@Override
-	@Nullable
+	
 	protected ItemStack[] get(Event e) {
 		Recipe r = recipe.getSingle(e);
 		if (r != null){

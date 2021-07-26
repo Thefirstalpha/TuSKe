@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.hooks.legendchat.expressions;
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import br.com.devpaulo.legendchat.api.events.PrivateMessageEvent;
 import ch.njol.skript.ScriptLoader;
@@ -45,12 +45,12 @@ public class ExprTellMessage extends SimpleExpression<String> {
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "tell message";
 	}
 
 	@Override
-	@Nullable
+	
 	protected String[] get(Event e) {
 		PrivateMessageEvent tell = (PrivateMessageEvent)e;
 		return new String[]{tell.getMessage()};

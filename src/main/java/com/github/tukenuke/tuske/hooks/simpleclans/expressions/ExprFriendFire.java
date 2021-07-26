@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -20,7 +20,7 @@ public class ExprFriendFire extends SimplePropertyExpression <Player, Boolean>{
 	}
 
 	@Override
-	@Nullable
+
 	public Boolean convert(Player p) {
 		ClanPlayer cp = SimpleClans.getInstance().getClanManager().getClanPlayer(p);
 		if (cp != null){

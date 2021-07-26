@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.hooks.legendchat.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.Player;
@@ -24,7 +24,7 @@ public class ExprHideState extends SimplePropertyExpression<Player, Boolean>{
 	}
 
 	@Override
-	@Nullable
+
 	public Boolean convert(Player p) {
 		return Legendchat.getPlayerManager().isPlayerHiddenFromRecipients(p);
 	}

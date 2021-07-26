@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.events;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.SkriptEventHandler;
 import ch.njol.skript.lang.SelfRegisteringSkriptEvent;
@@ -73,7 +73,7 @@ public class EvtAnvil extends SelfRegisteringSkriptEvent{
 	};
 	private int type = 0;
 	@Override
-	public String toString(@Nullable Event e, boolean b) {
+	public String toString( Event e, boolean b) {
 		return "anvil event";
 	}
 

@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions.customenchantments;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -24,7 +24,7 @@ public class ExprLoreName extends SimplePropertyExpression<CEnchant, String>{
 	}
 
 	@Override
-	@Nullable
+	
 	public String convert(CEnchant ce) {
 		return ce.getEnchant().getName();
 	}

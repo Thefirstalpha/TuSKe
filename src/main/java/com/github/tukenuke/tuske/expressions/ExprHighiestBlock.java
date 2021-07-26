@@ -5,7 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -37,12 +37,12 @@ public class ExprHighiestBlock extends SimpleExpression<Block>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "highiest block at " + this.l;
 	}
 
 	@Override
-	@Nullable
+	
 	protected Block[] get(Event e) {
 		Location l = this.l.getSingle(e);
 		if (l != null)

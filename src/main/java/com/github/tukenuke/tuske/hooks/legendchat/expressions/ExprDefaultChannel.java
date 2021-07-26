@@ -8,7 +8,7 @@ import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.channels.types.Channel;
 import br.com.devpaulo.legendchat.players.PlayerManager;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -26,7 +26,7 @@ public class ExprDefaultChannel extends SimplePropertyExpression<Player, Channel
 	}
 
 	@Override
-	@Nullable
+	
 	public Channel convert(Player e) {
 		PlayerManager pm = Legendchat.getPlayerManager();
 		if (pm.getPlayerFocusedChannel(e) != null)

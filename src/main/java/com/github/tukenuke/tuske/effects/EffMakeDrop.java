@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -40,7 +40,7 @@ public class EffMakeDrop extends Effect{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "make " + this.p.toString(e, arg1) + " drop " + this.i.toString(e, arg1) + " from " + (remove ? "his inventory" : f.toString(e, arg1));
 	}
 

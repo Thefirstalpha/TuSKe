@@ -2,7 +2,7 @@ package com.github.tukenuke.tuske.hooks.simpleclans.expressions;
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -35,12 +35,12 @@ public class ExprClanFromTag extends SimpleExpression<Clan>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "clan from " + this.s;
 	}
 
 	@Override
-	@Nullable
+	
 	protected Clan[] get(Event e) {
 		String s = this.s.getSingle(e);
 		Clan c = SimpleClans.getInstance().getClanManager().getClan(s.toLowerCase());

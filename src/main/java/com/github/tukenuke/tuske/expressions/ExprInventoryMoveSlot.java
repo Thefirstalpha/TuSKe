@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -40,12 +40,12 @@ public class ExprInventoryMoveSlot extends SimpleExpression<Integer>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "event-inventory-move-slot";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Integer[] get(Event e) {
 		return new Integer[]{ (isFrom) ? ((InventoryMoveEvent)e).getSlotFrom() : ((InventoryMoveEvent)e).getSlotTo()};
 	}

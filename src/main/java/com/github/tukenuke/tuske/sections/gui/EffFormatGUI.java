@@ -15,7 +15,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -108,7 +108,7 @@ public class EffFormatGUI extends EffectSection {
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {		
+	public String toString( Event e, boolean arg1) {		
 		return "format a gui slot " + (s != null ? s.toString(e, arg1) : -1) + " of " + p.toString(e, arg1) + " with " + i.toString(e, arg1);
 	}
 

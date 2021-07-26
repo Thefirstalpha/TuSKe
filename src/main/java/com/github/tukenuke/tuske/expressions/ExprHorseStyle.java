@@ -5,7 +5,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Horse;
 import org.bukkit.event.Event;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -23,7 +23,7 @@ public class ExprHorseStyle extends SimplePropertyExpression<Entity, String>{
 	}
 
 	@Override
-	@Nullable
+
 	public String convert(Entity e) { 
 		if (e instanceof Horse && ((Horse)e).getVariant().equals(Horse.Variant.HORSE) && !((Horse)e).getStyle().equals(Horse.Style.NONE)){
 			return ((Horse)e).getStyle().name().toLowerCase().replaceAll("_", " ");

@@ -2,6 +2,7 @@ package com.github.tukenuke.tuske.manager.gui.v2;
 
 import ch.njol.skript.SkriptEventHandler;
 import ch.njol.skript.lang.*;
+import ch.njol.util.NonNullPair;
 import com.github.tukenuke.tuske.TuSKe;
 import com.github.tukenuke.tuske.util.ReflectionUtils;
 import com.github.tukenuke.tuske.listeners.GUIListener;
@@ -24,8 +25,11 @@ public class SkriptGUIEvent extends SkriptEvent {
 			instance = new SkriptGUIEvent();
 		return instance;
 	}
-
-	private final Map<Class, List<Trigger>> triggers = ReflectionUtils.getField(SkriptEventHandler.class, null, "triggers");
+	static {
+		System.out.println("============================================================================================================================="+
+				ReflectionUtils.getField(SkriptEventHandler.class, null, "triggers").toString());
+	}
+	private final List<NonNullPair<Class<? extends Event>, Trigger>> triggers = ReflectionUtils.getField(SkriptEventHandler.class, null, "triggers");
 	private final List<GUIListener> listeners = new ArrayList<>();
 	private boolean registered = false;
 	private SkriptGUIEvent() {
@@ -83,21 +87,13 @@ public class SkriptGUIEvent extends SkriptEvent {
 	private void addTrigger(Trigger t, int priority, Class<? extends Event>... clzz) {
 		if (priority == 0) {
 			for (Class clz : clzz) {
-				List<Trigger> current = triggers.get(clz);
-				List<Trigger> newList = new ArrayList<>();
+				Trigger current = null;
+				for(NonNullPair<Class<? extends Event>, Trigger> pair : triggers) {
+					if(pair.getFirst() == clz)
+						current = pair.getSecond();
+				}
 				if (current == null) {
-					//It will add a new array in case it doesn't have the event.
-					newList.add(t);
-					triggers.put(clz, newList);
-				} else {
-					//It will put this trigger at first index
-					//Then adding the rest all again.
-					//This little workaround needed just to not
-					//have conflicts between different objects.
-					newList.addAll(current);
-					current.clear();
-					current.add(t);
-					current.addAll(newList);
+					triggers.add(new NonNullPair<Class<? extends Event>, Trigger>(clz, t));
 				}
 			}
 		} else {

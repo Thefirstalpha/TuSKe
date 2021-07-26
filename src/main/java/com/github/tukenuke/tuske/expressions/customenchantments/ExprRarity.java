@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions.customenchantments;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
@@ -23,7 +23,7 @@ public class ExprRarity extends SimplePropertyExpression<CEnchant, Number>{
 	}
 
 	@Override
-	@Nullable
+	
 	public Number convert(CEnchant ce) {
 		return (ce != null) ? ce.getEnchant().getMaxLevel() : null;
 	}

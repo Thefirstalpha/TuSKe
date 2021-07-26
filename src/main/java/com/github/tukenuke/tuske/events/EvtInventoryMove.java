@@ -10,7 +10,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -77,7 +77,7 @@ public class EvtInventoryMove extends SelfRegisteringSkriptEvent{
 	};
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "inventory move event";
 	}
 

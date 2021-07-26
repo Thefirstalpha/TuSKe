@@ -14,7 +14,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-import javax.annotation.Nullable;
+
 
 @Name("Minecraft Version")
 @Description("Returns the minecraft version of {{types|Player|player}}.")
@@ -45,7 +45,7 @@ public class ExprPlayerVersion extends SimplePropertyExpression<Player, String>{
 	}
 
 	@Override
-	@Nullable
+
 	public String convert(Player p) {
 		if (hasViaVersion){
 			int i = api.getPlayerVersion(p.getUniqueId());

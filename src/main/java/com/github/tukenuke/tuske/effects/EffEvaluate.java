@@ -94,7 +94,7 @@ public class EffEvaluate extends Effect{
 			varStr = (Expression<String>) expr[1];
 		withSafety = parseResult.expr.contains("with safety:");
 		args = Commands.currentArguments;
-		currentScript = ScriptLoader.currentScript;
+		currentScript = ScriptLoader.getCurrentScript();
 		return true;
 	}
 }

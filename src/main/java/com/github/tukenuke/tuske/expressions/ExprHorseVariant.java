@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.expressions;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.util.Version;
@@ -26,7 +26,7 @@ public class ExprHorseVariant extends SimplePropertyExpression<Entity, String>{
 	}
 
 	@Override
-	@Nullable
+	
 	public String convert(Entity e) {
 		if (e != null){
 			if (e instanceof Horse){

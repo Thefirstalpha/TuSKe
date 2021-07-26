@@ -1,6 +1,6 @@
 package com.github.tukenuke.tuske.events;
 
-import javax.annotation.Nullable;
+
 
 import com.github.tukenuke.tuske.listeners.PlayerMovesCheck;
 import org.bukkit.event.Event;
@@ -12,7 +12,7 @@ import ch.njol.skript.lang.SkriptParser.ParseResult;
 public class EvtPlayerStopsMove extends SkriptEvent{
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "player stops moving";
 	}
 

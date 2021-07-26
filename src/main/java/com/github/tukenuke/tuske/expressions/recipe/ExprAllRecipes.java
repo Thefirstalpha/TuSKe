@@ -19,7 +19,7 @@ import org.bukkit.inventory.Recipe;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 
-import javax.annotation.Nullable;
+
 
 import com.google.common.collect.Lists;
 
@@ -69,12 +69,12 @@ public class ExprAllRecipes extends SimpleExpression<Recipe>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return "all recipes";
 	}
 
 	@Override
-	@Nullable
+	
 	protected Recipe[] get(Event arg0) {		
 		List<Recipe> rec;
 		if (type == 0){

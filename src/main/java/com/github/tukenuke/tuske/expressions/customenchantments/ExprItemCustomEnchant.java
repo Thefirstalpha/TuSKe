@@ -3,7 +3,7 @@ package com.github.tukenuke.tuske.expressions.customenchantments;
 import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -38,12 +38,12 @@ public class ExprItemCustomEnchant extends SimpleExpression<ItemStack>{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return this.i + " with custom enchantments " + this.ce;
 	}
 
 	@Override
-	@Nullable
+	
 	protected ItemStack[] get(Event e) {
 		CEnchant[] ce = this.ce.getArray(e);
 		ItemStack i = this.i.getSingle(e).clone();

@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
 
@@ -19,7 +19,7 @@ public class ExprLastDamageCause extends SimplePropertyExpression<LivingEntity, 
 	}
 
 	@Override
-	@Nullable
+	
 	public DamageCause convert(LivingEntity e) {
 		if (e.getLastDamageCause() != null)
 			return e.getLastDamageCause().getCause();

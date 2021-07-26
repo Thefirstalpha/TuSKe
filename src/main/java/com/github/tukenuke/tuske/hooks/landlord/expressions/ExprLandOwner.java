@@ -4,7 +4,7 @@ import com.github.tukenuke.tuske.util.Registry;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 
-import javax.annotation.Nullable;
+
 
 import com.jcdesimp.landlord.persistantData.LowOwnedLand;
 
@@ -22,7 +22,7 @@ public class ExprLandOwner extends SimplePropertyExpression<LowOwnedLand, Offlin
 
 	@SuppressWarnings("deprecation")
 	@Override
-	@Nullable
+	
 	public OfflinePlayer convert(LowOwnedLand ol) {
 		return Bukkit.getOfflinePlayer(ol.getOwnerUsername());
 	}

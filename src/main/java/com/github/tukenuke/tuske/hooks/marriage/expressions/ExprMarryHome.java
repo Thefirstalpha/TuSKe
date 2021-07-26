@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import com.lenis0012.bukkit.marriage2.Marriage;
 import com.lenis0012.bukkit.marriage2.MarriageAPI;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.classes.Changer.ChangeMode;
@@ -26,7 +26,7 @@ public class ExprMarryHome extends SimplePropertyExpression <Player, Location>{
 	}
 
 	@Override
-	@Nullable
+
 	public Location convert(Player p) {
 		return MarriageAPI.getInstance().getMPlayer(p.getUniqueId()).getMarriage().getHome();
 	}

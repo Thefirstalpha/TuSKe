@@ -8,7 +8,7 @@ import br.com.devpaulo.legendchat.api.Legendchat;
 import br.com.devpaulo.legendchat.channels.types.Channel;
 import br.com.devpaulo.legendchat.players.PlayerManager;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Condition;
 import ch.njol.skript.lang.Expression;
@@ -34,7 +34,7 @@ public class CondCanSayChannel extends Condition{
 	}
 
 	@Override
-	public String toString(@Nullable Event arg0, boolean arg1) {
+	public String toString( Event arg0, boolean arg1) {
 		return this.p + " can say in channel " + this.c;
 	}
 

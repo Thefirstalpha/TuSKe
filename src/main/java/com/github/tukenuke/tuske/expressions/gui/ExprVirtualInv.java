@@ -13,7 +13,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 
-import javax.annotation.Nullable;
+
 
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
@@ -68,12 +68,12 @@ public class ExprVirtualInv extends SimpleExpression<Inventory>{
 	}
 
 	@Override
-	public String toString(@Nullable Event e, boolean arg1) {
+	public String toString( Event e, boolean arg1) {
 		return "virtual inventory";
 	}
 
 	@Override
-	@Nullable
+
 	protected Inventory[] get(Event e) {
 		InventoryType type;
 		if (it != null && (type = it.getSingle(e)) != null){
